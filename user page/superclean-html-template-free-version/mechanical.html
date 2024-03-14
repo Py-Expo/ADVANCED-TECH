@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTCL Complaint Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+    
+    .mainform{
+    margin: 50px 230px 50px 230px;
+    padding: 2rem;
+    border: 1px solid rgb(224,224,224) ;
+    border-radius: 15px;
+    box-shadow: 10px 7px 0 rgb(224,224,224);
+    background-color: white;
+    display: flex;
+    }
+
+    .header{
+        font-size: 17px;
+        font-family: candara;
+        display: flex-end;
+    }
+
+    input[type=text], select, textarea {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+@media screen and (max-width: 680px) {
+  .header, .mainform, input[type=submit] {
+    margin: 0px 0px 0px 0px;
+    
+  }
+}
+
+
+</style>
+
+<body style="background:  linear-gradient(to top left, #ffffff 0%, #66ccff 100%);">
+    <div class= "mainform">
+    <form>
+
+
+    <!--Header-->
+
+    <div class = "header">
+    <h1><b>Complaint Form</b></h1>
+        <p>Please send us details about the incident you would like to report. Our Complaint Center will analyze your complaint and take the appropriate measures 
+          in order that the reported situation will not occur at any other time in the future.</p>
+          <hr/>
+    </div>
+    
+
+    <br><br>
+    <!-- Name-->
+
+    <div class="form-group">
+        <label for="name"><b>Name:</b></label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="fname">
+      </div>
+
+     <br>
+
+      <div class="form-group">
+        <label for="email"><b>Email:</b></label> 
+        <input type="text" class="form-control" id="Email" placeholder="Enter Email" name="Email">
+      </div>
+   
+      <br>
+
+    <!-- Phone number-->
+    
+    <div class="form-group">
+        <label for="phoneNo"> <b>Phone Number: </b> </label>
+        <input type="text" id="phone" class="form-control" placeholder="Enter Landline Number" name = "phoneNo" >
+      </div>
+    
+      <br>
+    <!-- Select your area-->
+    <p><b>Problems in Mechanicals</b></p><br>
+    <input type="radio" id="Heater" name="fav_language" value="Heater">
+    <label for="Heater">Heater</label><br>
+    <input type="radio" id="lift" name="fav_language" value="lift">
+    <label for="lift">lift</label><br>
+    <input type="radio" id="Ac" name="fav_language" value="Ac">
+    <label for="Ac">Ac</label><br>
+    <input type="radio" id="Escalator" name="fav_language" value="Escalator">
+    <label for="Escalator">Escalator</label><br>
+    <input type="radio" id="others" name="fav_language" value="others">
+    <label for="others">others</label><br>
+
+    <!-- Description-->
+    <div class="form-group">
+        <label for="Description"> <b>Description: </b> </label>
+        <input type="text" id="Description" class="form-control" placeholder="Enter Description" name = "Description" >
+      </div>
+    
+      <br>
+    <!--Submit Button-->
+    <a href="complete.html" target="_blank"button type="button" class="btn btn-outline-primary" onclick="hello()">Submit</button></a>
+ 
+    </form>
+</div>
+<script>
+  const btn=document.getElementsByClassName("btn btn-outline-primary");
+  btn.addEventListener('click',function hello(){
+    window.location.href="complete.html";}
+  )
+</script>
+</body>
+
+</html>

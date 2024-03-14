@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>happy</title>
+    </head>
+    <body>
+        <h1>heloooo</h1>
+        <p><a href="{{url_for('adduser')}}">add users</a></p>
+        <table>
+            <tr>
+                <th>creater</th>
+                <th>about</th>
+                <th>status</th>
+                <th>edit</th>
+                <th>delete</th>
+            </tr>
+
+            {% for data in datas %}<!--Place holder % %-->
+            <tr>
+                <td>{{data.creater}}</td>
+                <td>{{data.about}}</td>
+                <td>{{data.status}}</td>
+                <td><a href="{{url_for('edituser',id=data.creater)}}">Update</a></td>
+                <td><a href="">deleted</a></td>
+            </tr>
+               
+
+            {% endfor %}
+
+        </table>
+    </body>
+</html>
